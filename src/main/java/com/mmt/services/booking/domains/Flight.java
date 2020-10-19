@@ -29,6 +29,20 @@ public class Flight {
     @Column
     private Timestamp start_time;
 
+
+    public Flight(int flight_id, String from_source, String to_destination, Date travel_date, int duration, double fare, Timestamp start_time) {
+        this.flight_id = flight_id;
+        this.from_source = from_source;
+        this.to_destination = to_destination;
+        this.travel_date = travel_date;
+        this.duration = duration;
+        this.fare = fare;
+        this.start_time = start_time;
+    }
+
+    public Flight(int i, String hyderabad, String bengaluru, String s, int i1, int i2, String s1, int i3) {
+    }
+
     public int getFlight_id() {
         return flight_id;
     }

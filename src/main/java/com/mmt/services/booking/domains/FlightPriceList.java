@@ -8,6 +8,14 @@ public class FlightPriceList implements Comparable<FlightPriceList>{
    private List<Flight> flights;
    private double fare;
 
+    public FlightPriceList() {
+    }
+
+    public FlightPriceList(List<Flight> flights, double fare) {
+        this.flights = flights;
+        this.fare = fare;
+    }
+
     public List<Flight> getFlights() {
         return flights;
     }
@@ -23,6 +31,8 @@ public class FlightPriceList implements Comparable<FlightPriceList>{
     public void setFare(double fare) {
         this.fare = fare;
     }
+
+
 
     @Override
     public String toString() {
