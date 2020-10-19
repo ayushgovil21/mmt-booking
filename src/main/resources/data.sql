@@ -23,10 +23,3 @@ INSERT INTO Bus (from_source,to_destination,travel_date,duration,fare,start_time
     ('INDORE', 'MUMBAI','2020-10-22',600,7400,'2020-10-22 21:00:00'),
     ('LUCKNOW', 'BENGALURU','2020-10-16',1000,8000,'2020-10-16 03:00:00'),
     ('PATNA', 'BENGALURU','2020-10-14',900,10000,'2020-10-14 04:00:00');
-
-INSERT INTO Passenger(first_name,last_name,email,phone,flight_id,bus_id,is_flight_booked,is_bus_booked) VALUES
-      ('Ayush', 'Govil', 'ayush.govil@gmail.com',8375039709,1,1,true,true),
-      ('Ankit', 'Kumar', 'ankit.kumar@email.com',8008000801,2,2,false,false),
-      ('Rohan', 'Gupta', 'rohan.gupta@gmail.com',4567812345,3,3,true,false),
-      ('Shruti','Pandey', 'shruti.pandey@yahoo.com',1234578965,4,4,false,true),
-      ('Samidha','Singh','samidha.singh@yahoo.com',9874651232,5,5,true,true);
