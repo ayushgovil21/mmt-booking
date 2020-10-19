@@ -29,6 +29,8 @@ public class Flight {
     @Column
     private Timestamp start_time;
 
+    public Flight() {
+    }
 
     public Flight(int flight_id, String from_source, String to_destination, Date travel_date, int duration, double fare, Timestamp start_time) {
         this.flight_id = flight_id;

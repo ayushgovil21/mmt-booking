@@ -8,11 +8,11 @@ public class BusPriceList implements Comparable<BusPriceList>{
     private List<Bus> buses;
     private double fare;
 
-    public List<Bus> getFlights() {
+    public List<Bus> getBuses() {
         return buses;
     }
 
-    public void setFlights(List<Bus> buses) {
+    public void setBuses(List<Bus> buses) {
         this.buses = buses;
     }
 
@@ -35,6 +35,6 @@ public class BusPriceList implements Comparable<BusPriceList>{
 
     @Override
     public int compareTo(@NonNull BusPriceList busPriceList) {
-        return this.fare < busPriceList.getFare() ?1 : 0;
+        return this.fare > busPriceList.getFare() ?1 : 0;
     }
 }
