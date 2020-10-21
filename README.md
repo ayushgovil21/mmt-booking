@@ -11,6 +11,7 @@ source to the destination will be displayed in the increasing order of the price
 Assumption:
 
 There won't be more than 1 stop between a source and a destination.
+Booking with both Flight and bus together from one source to one destination with stops won't be populated in the cheapest route possible list.
 
 Features
 
