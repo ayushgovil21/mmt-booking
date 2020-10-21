@@ -1,23 +1,44 @@
 DROP TABLE IF EXISTS Flight;
 
 CREATE TABLE Flight (
-  flight_id INT AUTO_INCREMENT  PRIMARY KEY,
-  from_source VARCHAR(250) NOT NULL,
-  to_destination VARCHAR(250) NOT NULL,
-  travel_date DATE NOT NULL,
+  flightId INT AUTO_INCREMENT  PRIMARY KEY,
+  fromSource VARCHAR(250) NOT NULL,
+  toDestination VARCHAR(250) NOT NULL,
+  travelDate DATE NOT NULL,
   duration INT NOT NULL,
   fare DOUBLE NOT NULL,
-  start_time TIMESTAMP NOT NULL
+  startTime TIMESTAMP NOT NULL
 );
 
 DROP TABLE IF EXISTS Bus;
 
 CREATE TABLE Bus (
-  bus_id INT AUTO_INCREMENT  PRIMARY KEY,
-  from_source VARCHAR(250) NOT NULL,
-  to_destination VARCHAR(250) NOT NULL,
-  travel_date DATE,
+  busId INT AUTO_INCREMENT  PRIMARY KEY,
+  fromSource VARCHAR(250) NOT NULL,
+  toDestination VARCHAR(250) NOT NULL,
+  travelDate DATE,
   duration INT NOT NULL,
   fare DOUBLE NOT NULL,
-  start_time TIMESTAMP NOT NULL
+  startTime TIMESTAMP NOT NULL
 );
+
+DROP TABLE IF EXISTS Passenger;
+
+CREATE TABLE Passenger (
+    passengerId INT AUTO_INCREMENT PRIMARY KEY,
+    emailId VARCHAR(250) NOT NULL,
+    firstName VARCHAR(250) NOT NULL,
+    lastName VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE Booking (
+    bookingId INT AUTO_INCREMENT PRIMARY KEY,
+    passengerId INT NOT NULL,
+    fromSource VARCHAR(250) NOT NULL,
+    toDestination VARCHAR(250) NOT NULL,
+    flightId INT NOT NULL,
+    busId INT NOT NULL,
+    flightStatus VARCHAR(250) NOT NULL,
+    busStatus VARCHAR(250) NOT NULL,
+    FOREIGN KEY (passengerId) REFERENCES Passenger(passengerId)
+)

@@ -1,4 +1,4 @@
-INSERT INTO Flight (from_source,to_destination,travel_date,duration,fare,start_time) VALUES
+INSERT INTO Flight (fromSource,toDestination,travelDate,duration,fare,startTime) VALUES
   ('HYDERABAD', 'BENGALURU','2020-10-18',80,1550,'2020-10-18 06:00:00'),
   ('BENGALURU', 'LUCKNOW','2020-10-17',120,9200,'2020-10-17 12:00:00'),
   ('BENGALURU', 'KOLKATA','2020-10-19',100,6000,'2020-10-19 18:00:00'),
@@ -11,7 +11,7 @@ INSERT INTO Flight (from_source,to_destination,travel_date,duration,fare,start_t
   ('LUCKNOW', 'BENGALURU','2020-10-16',100,8000,'2020-10-16 03:00:00'),
   ('PUNJAB', 'KOLKATA','2020-10-19',150,3000,'2020-10-19 16:00:00');
 
-INSERT INTO Bus (from_source,to_destination,travel_date,duration,fare,start_time) VALUES
+INSERT INTO Bus (fromSource,toDestination,travelDate,duration,fare,startTime) VALUES
     ('HYDERABAD', 'BENGALURU','2020-10-18',300,1550,'2020-10-18 06:00:00'),
     ('BENGALURU', 'LUCKNOW','2020-10-17',800,9200,'2020-10-17 12:00:00'),
     ('DELHI', 'KOLKATA','2020-10-19',400,6000,'2020-10-19 18:00:00'),
@@ -23,3 +23,17 @@ INSERT INTO Bus (from_source,to_destination,travel_date,duration,fare,start_time
     ('INDORE', 'MUMBAI','2020-10-22',600,7400,'2020-10-22 21:00:00'),
     ('LUCKNOW', 'BENGALURU','2020-10-16',1000,8000,'2020-10-16 03:00:00'),
     ('PATNA', 'BENGALURU','2020-10-14',900,10000,'2020-10-14 16:00:00');
+
+INSERT INTO Passenger (emailId,firstName,lastName) VALUES
+        ('ayush.govil@gmail.com','AYUSH','GOVIL'),
+        ('rishabh.pandey@gmail.com','RISHABH','PANDEY'),
+        ('rohan.trivedi@gmail.com','ROHAN','TRIVEDI'),
+        ('shruti.sharma@gmail.com','SHRUIT','SHARMA'),
+        ('samidha.singh@gmail.com','SAMIDHA','SINGH');
+
+--        INSERT INTO BOOKING(passengerId,fromSource,toDestination,flightId,busId,flightStatus,busStatus) VALUES
+--        (1,'HYDERABAD','BENGALURU',1,1,'BOOKED','BOOKED'),
+--        (2,'BENGALURU','KOLKATA',2,2,'BOOKED','BOOKED'),
+--        (3,'BENGALURU','PUNJAB',3,3,'BOOKED','BOOKED'),
+--        (4,'PUNJAB','PATNA',4,4,'BOOKED','BOOKED'),
+--        (5,'DELHI','HYDERABAD',5,5,'BOOKED','BOOKED');
