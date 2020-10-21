@@ -12,11 +12,11 @@ import java.util.List;
 public interface BusRepository extends JpaRepository<Bus,Integer> {
 
 
-    @Query("from Bus  where to_destination=:arrivalCity and travel_date=:dateOfDeparture")
+    @Query("from Bus  where toDestination=:arrivalCity and travelDate=:dateOfDeparture")
     List<Bus> findBusesToDestination(@Param("arrivalCity") String to,
                                           @Param("dateOfDeparture") Date departureDate);
 
-    @Query("from Bus where from_source=:departureCity and travel_date=:dateOfDeparture")
+    @Query("from Bus where fromSource=:departureCity and travelDate=:dateOfDeparture")
     List<Bus> findBusesFromSource(@Param("departureCity") String from,
                                        @Param("dateOfDeparture") Date departureDate);
 
