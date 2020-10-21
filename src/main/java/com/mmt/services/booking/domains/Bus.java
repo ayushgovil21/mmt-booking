@@ -10,51 +10,51 @@ public class Bus{
 
     @Column
     @Id
-    private int bus_id;
+    private int busId;
     @Column
-    private String from_source;
+    private String fromSource;
     @Column
-    private String to_destination;
+    private String toDestination;
     @Column
     @Temporal(TemporalType.DATE)
-    private Date travel_date;
+    private Date travelDate;
     @Column
     private int duration;
     @Column
     private double fare;
     @Column
-    private Timestamp start_time;
+    private Timestamp startTime;
 
-    public String getFrom_source() {
-        return from_source;
+    public String getFromSource() {
+        return fromSource;
     }
 
-    public void setFrom_source(String from_source) {
-        this.from_source = from_source;
+    public void setFromSource(String fromSource) {
+        this.fromSource = fromSource;
     }
 
-    public String getTo_destination() {
-        return to_destination;
+    public String getToDestination() {
+        return toDestination;
     }
 
-    public void setTo_destination(String to_destination) {
-        this.to_destination = to_destination;
+    public void setToDestination(String toDestination) {
+        this.toDestination = toDestination;
     }
 
-    public int getBus_id() {
-        return bus_id;
+    public int getBusId() {
+        return busId;
     }
 
-    public void setBus_id(int bus_id) {
-        this.bus_id = bus_id;
+    public void setBusId(int busId) {
+        this.busId = busId;
     }
 
-    public Date getTravel_date() {
-        return travel_date;
+    public Date getTravelDate() {
+        return travelDate;
     }
 
-    public void setTravel_date(Date travel_date) {
-        this.travel_date = travel_date;
+    public void setTravelDate(Date travelDate) {
+        this.travelDate = travelDate;
     }
 
     public int getDuration() {
@@ -73,24 +73,24 @@ public class Bus{
         this.fare = fare;
     }
 
-    public Date getStart_time() {
-        return start_time;
+    public Date getStartTime() {
+        return startTime;
     }
 
-    public void setStart_time(Timestamp start_time) {
-        this.start_time = start_time;
+    public void setStartTime(Timestamp startTime) {
+        this.startTime = startTime;
     }
 
     @Override
     public String toString() {
         return "Bus{" +
-                "bus_id='" + bus_id + '\'' +
-                ", from_source='" + from_source + '\'' +
-                ", to_destination='" + to_destination + '\'' +
-                ", travel_date=" + travel_date +
+                "bus_id='" + busId + '\'' +
+                ", from_source='" + fromSource + '\'' +
+                ", to_destination='" + toDestination + '\'' +
+                ", travel_date=" + travelDate +
                 ", duration=" + duration +
                 ", fare=" + fare +
-                ", start_time=" + start_time +
+                ", start_time=" + startTime +
                 '}';
     }
 }

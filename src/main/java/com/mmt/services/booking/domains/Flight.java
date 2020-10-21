@@ -11,70 +11,70 @@ public class Flight {
 
     @Column
     @Id
-    private int flight_id;
+    private int flightId;
 
     @Column
-    private String from_source;
+    private String fromSource;
 
     @Column
-    private String to_destination;
+    private String toDestination;
 
     @Column
     @Temporal(TemporalType.DATE)
-    private Date travel_date;
+    private Date travelDate;
     @Column
     private int duration;
     @Column
     private double fare;
     @Column
-    private Timestamp start_time;
+    private Timestamp startTime;
 
     public Flight() {
     }
 
-    public Flight(int flight_id, String from_source, String to_destination, Date travel_date, int duration, double fare, Timestamp start_time) {
-        this.flight_id = flight_id;
-        this.from_source = from_source;
-        this.to_destination = to_destination;
-        this.travel_date = travel_date;
+    public Flight(int flightId, String fromSource, String toDestination, Date travelDate, int duration, double fare, Timestamp startTime) {
+        this.flightId = flightId;
+        this.fromSource = fromSource;
+        this.toDestination = toDestination;
+        this.travelDate = travelDate;
         this.duration = duration;
         this.fare = fare;
-        this.start_time = start_time;
+        this.startTime = startTime;
     }
 
     public Flight(int i, String hyderabad, String bengaluru, String s, int i1, int i2, String s1, int i3) {
     }
 
-    public int getFlight_id() {
-        return flight_id;
+    public int getFlightId() {
+        return flightId;
     }
 
-    public void setFlight_id(int flight_id) {
-        this.flight_id = flight_id;
+    public void setFlightId(int flightId) {
+        this.flightId = flightId;
     }
 
-    public String getFrom_source() {
-        return from_source;
+    public String getFromSource() {
+        return fromSource;
     }
 
-    public void setFrom_source(String from_source) {
-        this.from_source = from_source;
+    public void setFromSource(String fromSource) {
+        this.fromSource = fromSource;
     }
 
-    public String getTo_destination() {
-        return to_destination;
+    public String getToDestination() {
+        return toDestination;
     }
 
-    public void setTo_destination(String to_destination) {
-        this.to_destination = to_destination;
+    public void setToDestination(String toDestination) {
+        this.toDestination = toDestination;
     }
 
-    public Date getTravel_date() {
-        return travel_date;
+    public Date getTravelDate() {
+        return travelDate;
     }
 
-    public void setTravel_date(Date travel_date) {
-        this.travel_date = travel_date;
+    public void setTravelDate(Date travelDate) {
+        this.travelDate = travelDate;
     }
 
     public int getDuration() {
@@ -93,24 +93,24 @@ public class Flight {
         this.fare = fare;
     }
 
-    public Timestamp getStart_time() {
-        return start_time;
+    public Timestamp getStartTime() {
+        return startTime;
     }
 
-    public void setStart_time(Timestamp start_time) {
-        this.start_time = start_time;
+    public void setStartTime(Timestamp startTime) {
+        this.startTime = startTime;
     }
 
     @Override
     public String toString() {
         return "Flight{" +
-                "flight_id='" + flight_id + '\'' +
-                ", from_source='" + from_source + '\'' +
-                ", to_destination='" + to_destination + '\'' +
-                ", travel_date=" + travel_date +
+                "flight_id='" + flightId + '\'' +
+                ", from_source='" + fromSource + '\'' +
+                ", to_destination='" + toDestination + '\'' +
+                ", travel_date=" + travelDate +
                 ", duration=" + duration +
                 ", fare=" + fare +
-                ", start_time=" + start_time +
+                ", start_time=" + startTime +
                 '}';
     }
 }
