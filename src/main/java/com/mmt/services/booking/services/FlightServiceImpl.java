@@ -32,9 +32,9 @@ public class FlightServiceImpl implements FlightService {
         List<FlightPriceList> fpl =new ArrayList<>();
         final Map<String,Flight> destMp = new HashMap<>();
         sourceFlightList.forEach(src->{
-            if(!src.getTo_destination().equals(destination))
+            if(!src.getToDestination().equals(destination))
             {
-                destMp.put(src.getTo_destination(),src);
+                destMp.put(src.getToDestination(),src);
             }
             else
             {
@@ -49,17 +49,17 @@ public class FlightServiceImpl implements FlightService {
         });
 
         destFlightList.forEach(dest->{
-            if(destMp.containsKey(dest.getFrom_source()))
+            if(destMp.containsKey(dest.getFromSource()))
             {
-                Date firstFlightDate = new Date(destMp.get(dest.getFrom_source()).getStart_time().getTime());
+                Date firstFlightDate = new Date(destMp.get(dest.getFromSource()).getStartTime().getTime());
                 FlightPriceList flightPriceList = new FlightPriceList();
                 Date dateWithDuration=new Date(firstFlightDate.getTime() + (dest.getDuration() * ONE_MINUTE_IN_MILLIS));
-                Date dateToReach = new Date(dest.getStart_time().getTime());
+                Date dateToReach = new Date(dest.getStartTime().getTime());
 
                 if(dateWithDuration.compareTo(dateToReach)<0) {
                     List<Flight> flights = new ArrayList<>();
-                    flightPriceList.setFare(dest.getFare() + destMp.get(dest.getFrom_source()).getFare());
-                    flights.add(destMp.get(dest.getFrom_source()));
+                    flightPriceList.setFare(dest.getFare() + destMp.get(dest.getFromSource()).getFare());
+                    flights.add(destMp.get(dest.getFromSource()));
                     flights.add(dest);
                     flightPriceList.setFlights(flights);
                     fpl.add(flightPriceList);
